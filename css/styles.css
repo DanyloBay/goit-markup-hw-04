@@ -4,6 +4,7 @@
     --second-color: #2196F3;
     --white-text-color: #FFFFFF;
     --background-color: #2F303A;
+    --background-gradient: rgba(47, 48, 58, 0.4);
     --background-team: #F5F4FA;
     --footer-text-color: rgba(255, 255, 255, 0.6);
     --background-button: #F5F4FA;
@@ -200,12 +201,30 @@ img {
     color: var(--second-color);
 }
 
+.contacts__nav>.icon__mail {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 10px;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+}
+
 /* Main */
 
 .main {
+    max-width: 1600px;
+    height: 600px;
     padding: 200px 0;
     text-align: center;
+
     background-color: var(--background-color);
+    background-image: linear-gradient(to right,
+            var(--background-gradient),
+            var(--background-gradient)),
+        url(../images/header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .main__tittle {
@@ -264,7 +283,36 @@ img {
     justify-content: space-between;
 }
 
-.features__story {}
+.features__story::before {
+    display: block;
+    content: "";
+    height: 120px;
+    padding: 25px 100px;
+    margin-bottom: 30px;
+
+    background-color: var(--background-team);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70px 70px;
+
+    border-radius: 4px;
+}
+
+.features__story:nth-child(1)::before {
+    background-image: url(../images/antenna.svg);
+}
+
+.features__story:nth-child(2)::before {
+    background-image: url(../images/clock.svg);
+}
+
+.features__story:nth-child(3)::before {
+    background-image: url(../images/diagram.svg);
+}
+
+.features__story:nth-child(4)::before {
+    background-image: url(../images/astronaut.svg);
+}
 
 .features__story:not(:first-child) {
     margin-left: 30px;
@@ -335,6 +383,27 @@ img {
 
     color: var(--main-color);
 }
+
+/* Networks */
+
+.network {
+    display: flex;
+    padding: 0;
+    margin: 0;
+
+    gap: 10px;
+
+    outline: 1px solid var(--main-color);
+}
+
+.icon {}
+
+.icon__net {
+    width: 20px;
+    height: 20px;
+    fill: red;
+}
+
 
 /* Portfolio */
 
