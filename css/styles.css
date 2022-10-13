@@ -283,41 +283,6 @@ img {
     justify-content: space-between;
 }
 
-.features__story::before {
-    display: block;
-    content: "";
-    height: 120px;
-    padding: 25px 100px;
-    margin-bottom: 30px;
-
-    background-color: var(--background-team);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 70px 70px;
-
-    border-radius: 4px;
-}
-
-.features__story:nth-child(1)::before {
-    background-image: url(../images/antenna.svg);
-}
-
-.features__story:nth-child(2)::before {
-    background-image: url(../images/clock.svg);
-}
-
-.features__story:nth-child(3)::before {
-    background-image: url(../images/diagram.svg);
-}
-
-.features__story:nth-child(4)::before {
-    background-image: url(../images/astronaut.svg);
-}
-
-.features__story:not(:first-child) {
-    margin-left: 30px;
-}
-
 .features__tittle {
     margin: 0;
     margin-bottom: 10px;
@@ -329,6 +294,22 @@ img {
     color: var(--main-color);
 
     text-transform: uppercase;
+}
+
+.icons__story {
+    width: 270px;
+    height: 120px;
+    padding: 25px 100px;
+    margin-bottom: 30px;
+
+    background-color: var(--background-team);
+    background-position: center;
+    border-radius: 4px;
+}
+
+.icon__item {
+    width: 70px;
+    height: 70px;
 }
 
 /* Projects */
@@ -388,20 +369,38 @@ img {
 
 .network {
     display: flex;
+    justify-content: center;
+    align-items: center;
+
     padding: 0;
-    margin: 0;
+    margin-top: 16px;
 
     gap: 10px;
 
     outline: 1px solid var(--main-color);
 }
 
-.icon {}
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 44px;
+    height: 44px;
+    color: red;
+    background-color: yellow;
+
+    border-radius: 50%;
+}
+
+.icon:hover {
+    color: white;
+}
 
 .icon__net {
     width: 20px;
     height: 20px;
-    fill: red;
+    fill: currentColor;
 }
 
 
