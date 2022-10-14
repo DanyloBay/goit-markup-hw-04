@@ -159,6 +159,14 @@ img {
     margin-right: 50px;
 }
 
+/* .item {
+    display: flex;
+    align-items: center;
+} */
+.contacts__content {
+    display: flex;
+}
+
 .menu__nav {
     display: block;
     padding-top: 32px;
@@ -202,12 +210,27 @@ img {
 }
 
 .contacts__nav>.icon__mail {
-    display: inline-flex;
+    align-items: center;
+    margin-right: 10px;
+    width: 16px;
+    height: 12px;
+}
+
+.contacts__nav>.icon__smartphone {
     align-items: center;
     margin-right: 10px;
     width: 10px;
-    height: 10px;
-    background-color: red;
+    height: 16px;
+}
+
+.contacts__nav:hover .icon__mail,
+.contacts__nav:focus .icon__mail {
+    fill: var(--second-color);
+}
+
+.contacts__nav:hover .icon__smartphone,
+.contacts__nav:focus .icon__smartphone {
+    fill: var(--second-color);
 }
 
 /* Main */
@@ -276,11 +299,11 @@ img {
 /* Features */
 
 .features {
-    margin: 0;
-    padding-left: 0;
+    /* margin: 0;
+    padding-left: 0; */
 
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 .features__tittle {
@@ -296,15 +319,21 @@ img {
     text-transform: uppercase;
 }
 
+
 .icons__story {
     width: 270px;
     height: 120px;
     padding: 25px 100px;
     margin-bottom: 30px;
 
+
     background-color: var(--background-team);
     background-position: center;
     border-radius: 4px;
+}
+
+.icons__story:non(:last-child) {
+    margin-right: 30px;
 }
 
 .icon__item {
