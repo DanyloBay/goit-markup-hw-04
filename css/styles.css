@@ -10,6 +10,7 @@
     --background-button: #F5F4FA;
     --portfolio-border-color: #EEEEEE;
     --white: #FFFFFF;
+    --header-icon-color: #757575;
     --icon-color: #AFB1B8;
     --border-icon-color: #AFB1B8;
     --second-icon-color: #2196F3;
@@ -206,6 +207,9 @@ img {
 }
 
 .contacts__nav {
+    display: flex;
+    align-items: center;
+
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -222,12 +226,14 @@ img {
     margin-right: 10px;
     width: 16px;
     height: 12px;
+    fill: var(--header-icon-color);
 }
 
 .contacts__nav>.icon__smartphone {
     margin-right: 10px;
     width: 10px;
     height: 16px;
+    fill: var(--header-icon-color);
 }
 
 .contacts__nav:hover .icon__mail,
@@ -243,6 +249,7 @@ img {
 /* Main */
 
 .main {
+    max-width: 1600px;
     height: 600px;
     padding: 200px 0;
     text-align: center;
@@ -254,6 +261,7 @@ img {
         url(../images/header.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
 .main__tittle {
